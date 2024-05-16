@@ -1,3 +1,7 @@
+//Overall, this program sets up a web application, configures it to handle
+ //HTTP requests, ensures the database is up-to-date, and then runs the 
+// application.
+
 using API.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -15,7 +19,12 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    //It outlines all the different parts of your API
+    //like what URLs you can visit and what information 
+    //you can get or send.
     app.UseSwagger();
+
+    //This is like taking that blueprint and turning it into a user-friendly website
     app.UseSwaggerUI();
 }
 
